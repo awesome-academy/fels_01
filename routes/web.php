@@ -22,7 +22,7 @@ Route::get('register', function () {
 });
 
 Route::get('couser', function () {
-    return view('pages.couser');
+    return view('pages.course');
 });
 
 Route::get('lesson_detail', function () {
@@ -31,4 +31,6 @@ Route::get('lesson_detail', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('user', 'UserController');
+
+Route::get('home', 'PageController@getIndex');

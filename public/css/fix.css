@@ -1,0 +1,22 @@
+.tdlist{
+    width: 50px;
+}
+.colorres{
+    color: red;
+}
+.colorgreen{
+    color: green;
+}
+.btnsty{
+    color: #e7e7e7;
+    background: #E3458B;
+}
+.th_lte{
+    width: 13%;
+}
+.dia_title{
+    display: none;
+}
+.pagination{
+    float: right;
+}
