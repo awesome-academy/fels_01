@@ -45,34 +45,21 @@
       <div class="course-list p-r-0">
          <div class="content grid">
             <div class="row">
-              @foreach($courses as $course)
+               @foreach($courses as $course)
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="mc-learning-item mc-item mc-item-2">
                      <div class="image-heading">
-                        <a href="#">
-                           <img src="https://zendvn.com/public/public/files/courses/thumb/13799276371_4f256dc8243db.png" alt="" style="height: 161px;">
+                        <a href="{{route('course', ['id' => $course->id])}}">
+                           <img src="{{$course->picture}}">
                            <div class="play-btn"> </div>
                         </a>
                      </div>
                      <div class="content-item">
-                        <h4><a href="#">{{$course->name}}</a></h4>
                      </div>
                   </div>
                </div>
-              @endforeach
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="mc-learning-item mc-item mc-item-2">
-                     <div class="image-heading">
-                        <a href="/public/thanh-vien/chi-tiet-khoa-hoc/20180521A8WXvjIrwzl-201805210lYB7MqEVX3">
-                           <img src="https://zendvn.com/public/public/files/courses/thumb/1526854718nodejs.jpg" alt="" style="height: 161px;">
-                           <div class="play-btn"> </div>
-                        </a>
-                     </div>
-                     <div class="content-item">
-                        <h4><a href="/public/thanh-vien/chi-tiet-khoa-hoc/20180521A8WXvjIrwzl-201805210lYB7MqEVX3">Lập trình NodeJS Level 1</a></h4>
-                     </div>
-                  </div>
-               </div>
+               @endforeach
+
             </div>
          </div>
          <div class="add_course"><a href="http://zend.vn/dang-ky-khoa-hoc/"></a></div>

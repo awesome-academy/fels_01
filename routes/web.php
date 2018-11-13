@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', 'HomeController@index');
+Route::get('course/{id}', 'HomeController@getLessions')->name('course');
+Route::get('lesson_detail/{id}', 'HomeController@lesstionDetail');
+Route::get('error', 'HomeController@errorPage');
 Route::get('login', function () {
     return view('pages.login');
 });
@@ -24,13 +25,7 @@ Route::get('register', function () {
 Route::get('couser', function () {
     return view('pages.course');
 });
-
-Route::get('lesson_detail', function () {
-    return view('pages.lesson_detail');
-});
-
 Auth::routes();
-
 Route::resource('user', 'UserController');
 
 Route::get('home', 'PageController@getIndex');

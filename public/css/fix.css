@@ -20,3 +20,15 @@
 .pagination{
     float: right;
 }
+.dialog_st{
+    display: none;
+}
+.width_th{
+    width: 13%;
+}
+.input_padding{
+    padding: 5px;
+}
+.dis_play{
+    display: none;
+}
